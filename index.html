@@ -6,27 +6,124 @@
   <title>For My Love 💗</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; font-family: 'Press Start 2P', cursive; user-select: none; }
-    body { margin: 0; padding: 0; background-color: #ffdeeb; background-image: radial-gradient(#ffb6c1 2px, transparent 2px); background-size: 20px 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh; color: #d63384; text-align: center; }
-    .card { background: #fff0f5; border: 6px solid #ff69b4; box-shadow: 8px 8px 0px #d63384; padding: 25px; border-radius: 15px; max-width: 450px; width: 90%; position: relative; }
-    img { width: 150px; height: 150px; border: 4px solid #ff69b4; border-radius: 10px; margin-bottom: 15px; object-fit: cover; }
-    h2 { font-size: 14px; line-height: 1.6; margin-bottom: 20px; color: #c71585; }
-    .btn-container { display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap; margin-top: 15px; }
-    button { background-color: #ff69b4; color: white; border: 4px solid #c71585; box-shadow: 4px 4px 0px #8b008b; padding: 12px 18px; font-size: 10px; cursor: pointer; border-radius: 8px; transition: transform 0.1s; }
-    button:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0px #8b008b; }
-    .btn-no { background-color: #ffb6c1; border-color: #db7093; box-shadow: 4px 4px 0px #c71585; color: #8b008b; }
-    .sub-text { font-size: 9px; color: #db7093; margin-top: 10px; height: 15px; }
-    .option-btn { display: block; width: 100%; margin: 10px 0; }
-    .hidden { display: none; }
-    .modal { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; justify-content: center; align-items: center; border-radius: 10px; }
-    .modal-content { background: white; padding: 20px; border: 4px solid #ff69b4; border-radius: 10px; font-size: 10px; line-height: 1.5; }
+    * {
+      box-sizing: border-box;
+      font-family: 'Press Start 2P', cursive;
+      user-select: none;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffdeeb;
+      background-image: radial-gradient(#ffb6c1 2px, transparent 2px);
+      background-size: 20px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #d63384;
+      text-align: center;
+    }
+    .card {
+      background: #fff0f5;
+      border: 6px solid #ff69b4;
+      box-shadow: 8px 8px 0px #d63384;
+      padding: 25px;
+      border-radius: 15px;
+      max-width: 450px;
+      width: 90%;
+      position: relative;
+    }
+    img {
+      width: 150px;
+      height: 150px;
+      border: 4px solid #ff69b4;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+    h2 {
+      font-size: 13px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: #c71585;
+    }
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+    button {
+      background-color: #ff69b4;
+      color: white;
+      border: 4px solid #c71585;
+      box-shadow: 4px 4px 0px #8b008b;
+      padding: 12px 18px;
+      font-size: 10px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: transform 0.1s;
+    }
+    button:active {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0px #8b008b;
+    }
+    .btn-no {
+      background-color: #ffb6c1;
+      border-color: #db7093;
+      box-shadow: 4px 4px 0px #c71585;
+      color: #8b008b;
+    }
+    .sub-text {
+      font-size: 9px;
+      color: #db7093;
+      margin-top: 10px;
+      height: 15px;
+    }
+    .option-btn {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+    }
+    .hidden {
+      display: none !important;
+    }
+    
+    /* Modal Popup Fix */
+    .modal {
+      position: fixed;
+      top: 0; 
+      left: 0; 
+      width: 100vw; 
+      height: 100vh;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .modal-content {
+      background: white;
+      padding: 20px;
+      border: 4px solid #ff69b4;
+      border-radius: 10px;
+      font-size: 10px;
+      line-height: 1.6;
+      max-width: 80%;
+      box-shadow: 6px 6px 0px #d63384;
+    }
   </style>
 </head>
 <body>
 
 <div class="card">
+  
+  <!-- Screen 1 -->
   <div id="screen1">
-    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Z2Y3R2Z3p4Y3R2Z3p4Y3R2Z3p4Y3R2Z3p4Y3R2Z3p4JmVwPXZ1X2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/K1tgb1IUeBOA8/giphy.gif" alt="Cat GIF">
+    <img src="https://media.tenor.com/gU81473p4E4AAAAC/cat-kiss.gif" alt="Cat GIF">
     <h2 id="title1">aya, wach 3arfa chhal kat3ajbini wkanbrik a bb💗?</h2>
     <div class="btn-container">
       <button id="btnYes" onclick="goToScreen(2)">IYEH 3ARFA</button>
@@ -35,12 +132,14 @@
     <div id="noSubText" class="sub-text"></div>
   </div>
 
+  <!-- Screen 2 -->
   <div id="screen2" class="hidden">
-    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHp1eXp2a3R2Z3p4Y3R2Z3p4Y3R2Z3p4Y3R2Z3p4Y3R2Z3p4JmVwPXZ1X2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/G3va3fD2IQA9C/giphy.gif" alt="Kiss GIF">
+    <img src="https://media.tenor.com/vH96-w-p-6AAAAAC/milk-and-mocha-bear.gif" alt="Kiss GIF">
     <h2>YAY! Wa khassak tkon 3arfa!</h2>
     <button onclick="goToScreen(3)">KLIKEY HNA BASH TKEMLI</button>
   </div>
 
+  <!-- Screen 3 -->
   <div id="screen3" class="hidden">
     <h2>chno aktar haja kat3ajbak fiya ?</h2>
     <button class="option-btn" onclick="selectOption1('soti')">soti</button>
@@ -48,6 +147,7 @@
     <button class="option-btn" onclick="selectOption1('Kolchi')">Kolchi</button>
   </div>
 
+  <!-- Screen 4 -->
   <div id="screen4" class="hidden">
     <h2>chhal kadni ana kanbriiiiiiiik💗</h2>
     <button class="option-btn" onclick="checkQuiz('wrong')">100%</button>
@@ -57,42 +157,60 @@
     <button class="option-btn" onclick="checkQuiz('correct')">∞×∞</button>
   </div>
 
+  <!-- Screen 5 -->
   <div id="screen5" class="hidden">
-    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnE3M2R2Z3p4Y3R2Z3p4Y3R2Z3p4Y3R2Z3p4Y3R2Z3p4JmVwPXZ1X2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/LpDmM2wSt6xE0/giphy.gif" alt="Love GIF">
+    <img src="https://media.tenor.com/03S48A6k-H4AAAAC/peach-goma.gif" alt="Love GIF">
     <h2>AKTAAR HJA KANBHIK!!!</h2>
-    <p id="summaryText" style="font-size: 9px; color: #c71585;"></p>
+    <p id="summaryText" style="font-size: 9px; color: #c71585; margin: 15px 0;"></p>
     <button onclick="openNote()">💌 1 NEW MESSAGE</button>
   </div>
 
+  <!-- Modal Note (Hidden by default) -->
   <div id="noteModal" class="modal hidden">
     <div class="modal-content">
       <p>Nti a7san 7aja wa93at liya f 7ayati.. Kat3jbini w kanbrik bzaaaaaaaaaaf a bb💗!</p>
       <button onclick="closeNote()" style="margin-top: 15px;">Close x</button>
     </div>
   </div>
+
 </div>
 
 <script>
   let noCount = 0;
-  const noMessages = ["Nari ma3arfach?!", "Men niyatk?", "Kanjm3 lik 9loba hna <3", "Rah kanbrik bzaaaaf!", "Ghadia tbkini...", "9albi t3sar <3"];
+  const noMessages = [
+    "Nari ma3arfach?!",
+    "Men niyatk?",
+    "Kanjm3 lik 9loba hna <3",
+    "Rah kanbrik bzaaaaf!",
+    "Ghadia tbkini...",
+    "9albi t3sar <3"
+  ];
+
   let selectedOption1 = "";
 
   function handleNo() {
     const btnYes = document.getElementById('btnYes');
     const subText = document.getElementById('noSubText');
+    
     let currentSize = parseFloat(window.getComputedStyle(btnYes).fontSize);
     btnYes.style.fontSize = (currentSize + 4) + 'px';
     btnYes.style.padding = (currentSize + 2) + 'px';
+
     subText.innerText = noMessages[noCount % noMessages.length];
     noCount++;
   }
 
   function goToScreen(screenNum) {
-    for (let i = 1; i <= 5; i++) { document.getElementById(`screen${i}`).classList.add('hidden'); }
+    for (let i = 1; i <= 5; i++) {
+      document.getElementById(`screen${i}`).classList.add('hidden');
+    }
     document.getElementById(`screen${screenNum}`).classList.remove('hidden');
   }
 
-  function selectOption1(val) { selectedOption1 = val; goToScreen(4); }
+  function selectOption1(val) {
+    selectedOption1 = val;
+    goToScreen(4);
+  }
 
   function checkQuiz(status) {
     if (status === 'wrong') {
@@ -104,11 +222,15 @@
     }
   }
 
-  function openNote() { document.getElementById('noteModal').classList.remove('hidden'); }
-  function closeNote() { document.getElementById('noteModal').classList.add('hidden'); }
+  function openNote() {
+    document.getElementById('noteModal').classList.remove('hidden');
+  }
+
+  function closeNote() {
+    document.getElementById('noteModal').classList.add('hidden');
+  }
 </script>
 
 </body>
 </html>
-
 
