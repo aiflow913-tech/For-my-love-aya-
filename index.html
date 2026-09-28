@@ -119,14 +119,16 @@
 </head>
 <body>
 
+<!-- Audio Element -->
 <audio id="bgMusic" loop preload="auto">
-  <source src="music.mp3" type="audio/mpeg">
+  <source src="blue (Lyrics) [4adZ7AguVcw]_2026_03_28_18_52_06.mp3" type="audio/mpeg">
 </audio>
 
 <div class="card" onclick="playAudioOnce()">
   
+  <!-- Screen 1 -->
   <div id="screen1">
-    <img src="cat1.gif" alt="Cat GIF">
+    <img src="6194eeff3461aeb7c3b63db388d00d1e.gif" alt="Cat GIF">
     <h2 id="title1">aya, wach 3arfa chhal kat3ajbini wkanbrik a bb💗?</h2>
     <div class="btn-container">
       <button id="btnYes" onclick="goToScreen(2)">IYEH 3ARFA</button>
@@ -135,22 +137,25 @@
     <div id="noSubText" class="sub-text"></div>
   </div>
 
+  <!-- Screen 2 -->
   <div id="screen2" class="hidden">
-    <img src="cat2.gif" alt="Cat GIF">
+    <img src="bc218896240bcc745fe80d0a299f268e.gif" alt="Cat GIF">
     <h2>YAY! Wa khassak tkon 3arfa!</h2>
     <button onclick="goToScreen(3)">KLIKEY HNA BASH TKEMLI</button>
   </div>
 
+  <!-- Screen 3 -->
   <div id="screen3" class="hidden">
-    <img src="cat3.gif" alt="Cat GIF">
+    <img src="7c660895bc2e4cb572ee9adf3bf5642c.gif" alt="Cat GIF">
     <h2>chno aktar haja kat3ajbak fiya ?</h2>
     <button class="option-btn" onclick="selectOption1('soti')">soti</button>
     <button class="option-btn" onclick="selectOption1('el hanan dyali Lik')">el hanan dyali Lik</button>
     <button class="option-btn" onclick="selectOption1('Kolchi')">Kolchi</button>
   </div>
 
+  <!-- Screen 4 -->
   <div id="screen4" class="hidden">
-    <img src="cat4.gif" alt="Cat GIF">
+    <img src="ab2634cc0d8842984375172d0433e486.gif" alt="Cat GIF">
     <h2>chhal kadni ana kanbriiiiiiiik💗</h2>
     <button class="option-btn" onclick="checkQuiz('wrong')">100%</button>
     <button class="option-btn" onclick="checkQuiz('wrong')">200%</button>
@@ -159,13 +164,15 @@
     <button class="option-btn" onclick="checkQuiz('correct')">∞×∞</button>
   </div>
 
+  <!-- Screen 5 -->
   <div id="screen5" class="hidden">
-    <img src="cat5.gif" alt="Cat GIF">
+    <img src="f47b456697419fec6ea919e38e6a1595.gif" alt="Cat GIF">
     <h2>AKTAAR HJA KANBHIK!!!</h2>
     <p id="summaryText" style="font-size: 9px; color: #c71585; margin: 15px 0;"></p>
     <button onclick="openNote()">💌 1 NEW MESSAGE</button>
   </div>
 
+  <!-- Modal Note -->
   <div id="noteModal" class="modal hidden">
     <div class="modal-content">
       <p>Nti a7san 7aja wa93at liya f 7ayati.. Kat3jbini w kanbrik bzaaaaaaaaaaf a bb💗!</p>
@@ -208,5 +215,44 @@
 
     subText.innerText = noMessages[noCount % noMessages.length];
     noCount++;
+  }
+
+  function goToScreen(screenNum) {
+    playAudioOnce();
+    for (let i = 1; i <= 5; i++) {
+      document.getElementById(`screen${i}`).classList.add('hidden');
+    }
+    document.getElementById(`screen${screenNum}`).classList.remove('hidden');
+  }
+
+  function selectOption1(val) {
+    playAudioOnce();
+    selectedOption1 = val;
+    goToScreen(4);
+  }
+
+  function checkQuiz(status) {
+    playAudioOnce();
+    if (status === 'wrong') {
+      alert("ralat ❌ kanbriiiiiiiik ktr mn haka😏");
+    } else {
+      alert("n9adro n9olo had el jamab sahih walakin kanbriiiiiiiik ktr mn haka 💗");
+      document.getElementById('summaryText').innerText = "Kat3jbak fiya: " + selectedOption1;
+      goToScreen(5);
+    }
+  }
+
+  function openNote() {
+    document.getElementById('noteModal').classList.remove('hidden');
+  }
+
+  function closeNote() {
+    document.getElementById('noteModal').classList.add('hidden');
+  }
+</script>
+
+</body>
+</html>
+
     
 
